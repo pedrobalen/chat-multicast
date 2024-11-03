@@ -79,6 +79,7 @@ namespace chat
             chat_box.Size = new Size(776, 368);
             chat_box.TabIndex = 3;
             chat_box.Text = "";
+            chat_box.MouseClick += Chat_box_MouseClick;
             chat_box.TextChanged += richTextBox1_TextChanged;
             // 
             // ip_field

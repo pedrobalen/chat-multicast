@@ -31,7 +31,7 @@ namespace chat
             udpClient.Send(buffer, buffer.Length, endPoint);
         }
 
-   
+
         public string ReceiveMessage()
         {
             IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
@@ -39,7 +39,7 @@ namespace chat
             return Encoding.UTF8.GetString(buffer);
         }
 
-      
+
         public void LeaveGroup(string username)
         {
             string exitMessage = $"{username} left the room";
@@ -47,7 +47,7 @@ namespace chat
             udpClient.DropMulticastGroup(groupAddress);
         }
 
-     
+
         public void Dispose()
         {
             if (udpClient != null)
